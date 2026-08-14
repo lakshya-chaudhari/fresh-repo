@@ -36,7 +36,7 @@ pipeline {
 
         stage('Update Manifests Repo') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'github',
+                withCredentials([usernamePassword(credentialsId: 'github-creds',
                                   usernameVariable: 'GIT_USER',
                                   passwordVariable: 'GIT_TOKEN')]) {
                     sh """
